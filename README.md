@@ -25,3 +25,7 @@ Here are some good resources that this is based on:
 <https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/> \
 <http://www.osdever.net/bkerndev/index.php>
 
+### Todo List
+- [] Add necessary code for initial setup
+- [] Compiling and running C code
+- [] Compiling and running Rust code

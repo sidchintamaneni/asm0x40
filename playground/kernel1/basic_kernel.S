@@ -11,9 +11,13 @@ align 4								; The code is 4 byte aligned -> why?
 	dd FLAGS
 	dd CHECKSUM
 
-start:
+%macro __disp 1
 	mov dx, 0x3f8
-	mov eax, 0x41
+	mov al, %1
 	out dx, al
+%endmacro
+
+start:
+	__disp 0x41
 
 	hlt

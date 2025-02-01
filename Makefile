@@ -19,6 +19,9 @@ all: $(kernel) $(iso)
 docker: docker/Dockerfile
 	docker build --network=host --progress=auto -t os-build docker
 
+enter-docker:
+	docker run --rm -v ${WD}:/os-build -w /os-build -it os-build /bin/bash
+
 clean:
 	@echo "CLEAN"
 	rm -rf build $(assembly_object_files) $(kernel) $(iso)

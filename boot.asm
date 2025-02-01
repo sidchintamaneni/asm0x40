@@ -138,15 +138,11 @@ gdt64:
     dw $ - gdt64 - 1 ; size of gdt
     dq gdt64
 
-extern rust_main
-
 section .text
 bits 64
 long_mode_start:
-
-    ; call rust main (with multiboot pointer in rdi)
-    ;call rust_main
-
+	;
+	
 serial_init:
     ; ports:
     ;    +0 0x3f8 - read / write buffer / baud rate lsb
@@ -169,7 +165,7 @@ serial_init:
     __out 0x3fb, 0x03 ; 8 bits, no parity, one stop bit
     __out 0x3fa, 0xC7 ; Enable FIFO, clear them, with 14-byte threshold
     __out 0x3fc, 0x0F ; set in normal operating mode
-
+	; Hard code text when qemu is booted
 	__out 0x3f8, 0x20
 	__out 0x3f8, 0x20
 	__out 0x3f8, 0x20

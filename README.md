@@ -22,5 +22,6 @@ Here are some good resources that this is based on:
 <https://github.com/winksaville/baremetal-x86_64/tree/master?tab=readme-ov-file> \
 <https://os.phil-opp.com/entering-longmode/> \
 <https://www.cs.vu.nl/~herbertb/misc/writingkernels.txt> \
-<https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/>
+<https://mars-research.github.io/posts/2020/10/hello-world-on-bare-metal/> \
+<http://www.osdever.net/bkerndev/index.php>
 
